@@ -9,6 +9,8 @@ mean_sowbug <- mean(sowbug_counts)
 
 pois_sowbug <- dpois(k, mean_sowbug, log = FALSE)
 
-plot(k,sowbug_counts, col = "red")
+norm_sow <- sowbug_counts/sum(sowbug_counts)
+
+plot(k,norm_sow, col = "red")
 lines(k, pois_sowbug, col = "green")
 
